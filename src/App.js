@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import React from 'react';
 import Navbar from './components/navbar';
+import Accueil from './components/accueil';
+import Admin from './components/admin';
 
 
 class App extends React.Component {
@@ -11,6 +13,8 @@ class App extends React.Component {
   return(
     <div className="container">
       <Navbar />
+      <Accueil />
+      <Admin />
     </div>
   );
   }
