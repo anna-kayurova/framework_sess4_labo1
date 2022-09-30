@@ -6,25 +6,23 @@ import React from 'react';
 import Navbar from './components/navbar';
 import Accueil from './components/accueil';
 import Admin from './components/admin';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
   render(){
   return(
     <div className="container">
-      <Navbar />
-      <Accueil />
-      <Admin />
+      <BrowserRouter>
+        <Navbar />
+          <Routes>
+            <Route path="accueil" element={<Accueil />} />
+            <Route path="admin" element={<Admin />} />
+          </Routes>
+        </BrowserRouter>
     </div>
   );
   }
 }
-/*function App() {
-  return (
-    <div className="container">
-      Bonjour au monde de React!
-    </div>
-  );
-}*/
 
 export default App;
